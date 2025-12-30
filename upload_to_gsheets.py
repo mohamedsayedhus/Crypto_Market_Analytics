@@ -34,7 +34,7 @@ def upload_dataframe_to_gsheet(df):
         worksheet.update(
             [df.columns.tolist()] + df.values.tolist()
         )
-        print("✅ First load: headers + data uploaded")
+        print("First load: headers + data uploaded")
         return
 
     headers = existing_data[0]
@@ -44,7 +44,7 @@ def upload_dataframe_to_gsheet(df):
         worksheet.update(
             [df.columns.tolist()] + df.values.tolist()
         )
-        print("⚠️ load_date not found → sheet reset & full load done")
+        print("load_date not found → sheet reset & full load done")
         return
 
     existing_df = pd.DataFrame(existing_data[1:], columns=headers)
@@ -54,8 +54,9 @@ def upload_dataframe_to_gsheet(df):
     incremental_df = df[df["load_date"] > last_load_date]
 
     if incremental_df.empty:
-        print("⚠️ No new data to load")
+        print("No new data to load")
         return
 
     worksheet.append_rows(incremental_df.values.tolist())
-    print(f"✅ Incremental load: {len(incremental_df)} new rows added")
+    print(f"Incremental load: {len(incremental_df)} new rows added")
+
