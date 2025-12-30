@@ -5,6 +5,7 @@ This project is an end-to-end data analytics pipeline that extracts cryptocurren
 The project follows a real-world ETL architecture with support for incremental loading, KPIs, and Pivot Table–ready outputs.
 
 ## Crypto_Market_Analytics/
+
 │
 ├── extract.py              # Fetch crypto data from API
 ├── transform.py            # Data cleaning & KPI calculations
@@ -15,6 +16,15 @@ The project follows a real-world ETL architecture with support for incremental l
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
 
+## Technologies Used
+
+Pytho
+Pandas
+Requests
+Google Sheets API
+gspread
+Excel Pivot Tables
+ETL Design Pattern
 
 ## Project Overview
 
