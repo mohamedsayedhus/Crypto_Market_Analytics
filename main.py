@@ -9,4 +9,5 @@ df = transform_crypto_data(df)
 
 upload_dataframe_to_gsheet(df)
 
-print("✅ Pipeline finished successfully")
+print("Pipeline finished successfully")
+
